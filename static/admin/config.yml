@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: LuigiClaudio/lc-ga
+  name: git-gateway
+  branch: master
 
 media_folder: static/assets
 
