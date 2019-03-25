@@ -1,0 +1,9 @@
+.idea
+.plop-templates
+.storybook
+config
+coverage
+packages/*/node_modules/*
+public
+scripts
+src/serviceWorker.js
