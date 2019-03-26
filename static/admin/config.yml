@@ -1,6 +1,7 @@
 backend:
-    name: git-gateway
+    name: github
     branch: master
+    repo: LuigiClaudio/lc-ga #replace with your username/repo
 
 media_folder: static/assets
 
