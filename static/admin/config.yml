@@ -11,6 +11,9 @@ collections:
       folder: blog
       create: true
       fields:
-          - { name: date, label: Date, widget: date }
-          - { name: title, label: Title }
+          - { name: templateKey, label: Template Key, widget: hidden, default: blogTemplate }
+          - { name: date, label: Published Date, widget: datetime }
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Description, widget: string }
           - { name: body, label: Body, widget: markdown }
+          - { name: tags, label: Tags, widget: list }

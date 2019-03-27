@@ -19,8 +19,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
-    const blogPostTemplate = path.resolve('src/templates/blogTemplate.js');
-
     return graphql(`
         {
             allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
@@ -32,6 +30,8 @@ exports.createPages = ({ actions, graphql }) => {
                         frontmatter {
                             date
                             title
+                            tags
+                            templateKey
                         }
                         fields {
                             slug
@@ -48,7 +48,8 @@ exports.createPages = ({ actions, graphql }) => {
         return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
             createPage({
                 path: node.fields.slug,
-                component: blogPostTemplate,
+                tags: node.frontmatter.tags,
+                component: path.resolve(`src/templates/${String(node.frontmatter.templateKey)}.js`),
                 context: {
                     // Data passed to context is available
                     // in page queries as GraphQL variables
