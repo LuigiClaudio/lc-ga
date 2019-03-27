@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GlobalStyle from '../styles/GlobalStyle';
+import useSiteMetadata from '../helpers/useSiteMetadata';
 
 const Container = styled.div`
     align-items: center;
@@ -26,11 +27,13 @@ const SubTitle = styled.h2`
 `;
 
 export default () => {
+    const { title, description } = useSiteMetadata();
+
     return (
         <Container>
             <GlobalStyle />
-            <Title>Luigi Claudio</Title>
-            <SubTitle>Senior Front-end / WEB UI Developer and UX Designer</SubTitle>
+            <Title>{title}</Title>
+            <SubTitle>{description}</SubTitle>
         </Container>
     );
 };

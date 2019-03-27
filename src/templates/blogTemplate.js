@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
 
-export default ({ data }) => {
+const BlogTemplate = ({ data }) => {
     // const { markdownRemark } = data;
     // const { frontmatter, html } = markdownRemark;
     const post = data.markdownRemark;
@@ -15,6 +16,13 @@ export default ({ data }) => {
             </div>
         </Layout>
     );
+};
+
+export default BlogTemplate;
+
+BlogTemplate.propTypes = {
+    // eslint-disable-next-line react/forbid-prop-types
+    data: PropTypes.object.isRequired,
 };
 
 export const pageQuery = graphql`
