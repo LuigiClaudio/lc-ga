@@ -11,30 +11,35 @@ const Container = styled.div`
     flex-flow: column nowrap;
     height: 100vh;
     justify-content: center;
-    padding: 2vh 2vw;
+    padding: 2vh 10vw;
     text-align: center;
     width: 100vw;
 `;
 const Title = styled(H1)`
-    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0.5rem 0 0.25rem;
 `;
 const SubTitle = styled(H2)`
-    font-size: 1rem;
     font-weight: 300;
     margin: 0.5rem 0;
 `;
 
 export default () => {
-    const { title, description } = useSiteMetadata();
+    const { title, description, twitter } = useSiteMetadata();
 
     return (
         <Layout placeholder>
             <Container>
                 <Title>{title}</Title>
                 <SubTitle>{description}</SubTitle>
+                <a
+                    href="https://twitter.com/LuigiClaudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {twitter}
+                </a>
             </Container>
         </Layout>
     );
