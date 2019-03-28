@@ -12,7 +12,7 @@ const ListLink = props => {
     );
 };
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -55,3 +55,5 @@ export default ({ children }) => (
         )}
     />
 );
+
+export default Layout;

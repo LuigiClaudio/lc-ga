@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import GlobalStyle from '../styles/GlobalStyle';
-import useSiteMetadata from '../helpers/useSiteMetadata';
+import { useSiteMetadata } from '../../packages/helpers';
 
 const Container = styled.div`
     align-items: center;
