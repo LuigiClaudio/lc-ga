@@ -26,17 +26,17 @@ const typographyTheme = {
             },
         },
         body: {
-            color: '#1f3143',
+            color: '#222222',
             background: 'transparent',
         },
         link: {
-            color: '#1A9DDD',
-            hoverColor: '#136c97',
+            color: '#4285F4',
+            hoverColor: '#4285F4',
             decoration: 'none',
             hoverDecoration: 'underline',
         },
         content: {
-            fontSize: '0.875rem',
+            fontSize: '1rem',
             fontWeight: 400,
             lead: {
                 fontSize: '1.3125rem',
@@ -44,10 +44,10 @@ const typographyTheme = {
             },
         },
         color: {
-            primary: '#1A9DDD',
-            secondary: '#FFA300',
-            default: '#1f3143',
-            white: '#FFFFFF',
+            default: '#222222',
+            primary: '#4285F4',
+            secondary: '#4285F4',
+            light: '#FFFFFF',
         },
     },
 };

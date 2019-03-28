@@ -22,7 +22,7 @@ const TagRoute = props => {
     return (
         <Layout>
             <section className="section">
-                <Helmet title={`${tag} | ${title}`} />
+                <Helmet title={`${tag}`} />
                 <div className="container content">
                     <div className="columns">
                         <div className="column is-10 is-offset-1" style={{ marginBottom: '6rem' }}>

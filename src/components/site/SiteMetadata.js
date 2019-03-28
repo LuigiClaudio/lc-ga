@@ -24,8 +24,14 @@ const SiteMetadata = ({ pathname }) => {
                     siteMetadata: { siteUrl, title, twitter },
                 },
             }) => (
-                <Helmet defaultTitle={title} titleTemplate={`%s | ${title}`}>
-                    <html lang="en" />
+                <Helmet
+                    defaultTitle={title}
+                    titleTemplate={`%s | ${title}`}
+                    onChangeClientState={(newState, addedTags, removedTags) =>
+                        console.log(newState, addedTags, removedTags)
+                    }
+                >
+                    <html lang="en" amp />
                     <link rel="canonical" href={`${siteUrl}${pathname}`} />
                     <meta name="docsearch:version" content="2.0" />
                     <meta

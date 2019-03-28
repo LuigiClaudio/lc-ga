@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../../styles/theme';
 import GlobalStyle from '../../styles/GlobalStyle';
 import SiteMetadata from '../site/SiteMetadata';
+import Container from './Container';
 
 const ListLink = props => {
     const { to, children } = props;
@@ -16,7 +17,7 @@ const ListLink = props => {
     );
 };
 
-const Layout = ({ children }) => (
+const Layout = ({ placeholder, children }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -32,21 +33,23 @@ const Layout = ({ children }) => (
                 <>
                     <SiteMetadata />
                     <GlobalStyle />
-                    <div>
-                        <header>
-                            <Link to="/">
-                                <h3 style={{ display: `inline` }}>
-                                    {data.site.siteMetadata.title}
-                                </h3>
-                            </Link>
-                            <ul style={{ listStyle: `none`, float: `right` }}>
-                                <ListLink to="/">Home</ListLink>
-                                <ListLink to="/about/">About</ListLink>
-                                <ListLink to="/contact/">Contact</ListLink>
-                            </ul>
-                        </header>
+                    <Container>
+                        {!placeholder && (
+                            <header>
+                                <Link to="/">
+                                    <h3 style={{ display: `inline` }}>
+                                        {data.site.siteMetadata.title}
+                                    </h3>
+                                </Link>
+                                <ul style={{ listStyle: `none`, float: `right` }}>
+                                    <ListLink to="/">Home</ListLink>
+                                    <ListLink to="/about/">About</ListLink>
+                                    <ListLink to="/contact/">Contact</ListLink>
+                                </ul>
+                            </header>
+                        )}
                         {children}
-                    </div>
+                    </Container>
                 </>
             </ThemeProvider>
         )}
@@ -55,10 +58,13 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
     children: PropTypes.node,
+    /** Show / Hide navigation */
+    placeholder: PropTypes.bool,
 };
 
 Layout.defaultProps = {
     children: null,
+    placeholder: false,
 };
 
 export default Layout;

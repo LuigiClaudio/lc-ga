@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet';
 import Layout from '../../components/layout/Layout';
 import { H1 } from '../../../packages/typography';
 import List from './components/List';
@@ -17,6 +18,7 @@ const TagsPage = ({
 }) => {
     return (
         <Layout>
+            <Helmet title="Tags" />
             <H1>Tags</H1>
             <List>
                 {group.map(tag => (
