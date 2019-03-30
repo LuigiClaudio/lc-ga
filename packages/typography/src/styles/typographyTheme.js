@@ -9,8 +9,8 @@ const typographyTheme = {
             fontFamily: 'Trebuchet MS,Tahoma,sans-serif',
             lineHeight: '1.2',
             fontSize: {
-                h1: 'calc(2.25rem + .3vw)',
-                h2: 'calc(1.625rem + .3vw)',
+                h1: 'calc(2.25rem + 0.5vw)',
+                h2: 'calc(1.625rem + 0.5vw)',
                 h3: '1.5rem',
                 h4: '1.125rem',
                 h5: '1rem',

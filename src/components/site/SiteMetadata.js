@@ -4,8 +4,6 @@ import { graphql, StaticQuery } from 'gatsby';
 // import favIcon from '../images/favIcon.ico';
 
 const SiteMetadata = ({ pathname }) => {
-    console.log(pathname);
-
     return (
         <StaticQuery
             query={graphql`
@@ -27,12 +25,12 @@ const SiteMetadata = ({ pathname }) => {
                 <Helmet
                     defaultTitle={title}
                     titleTemplate={`%s | ${title}`}
-                    onChangeClientState={(newState, addedTags, removedTags) =>
-                        console.log(newState, addedTags, removedTags)
-                    }
+                    // onChangeClientState={(newState, addedTags, removedTags) =>
+                    //     // console.log(newState, addedTags, removedTags)
+                    // }
                 >
                     <html lang="en" amp />
-                    <link rel="canonical" href={`${siteUrl}${pathname}`} />
+                    <link rel="canonical" href={`${siteUrl}${location.pathname}`} />
                     <meta name="docsearch:version" content="2.0" />
                     <meta
                         name="viewport"

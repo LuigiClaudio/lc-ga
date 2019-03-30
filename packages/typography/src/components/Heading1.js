@@ -11,6 +11,7 @@ const Heading1 = styled.h1`
             props.theme.typography.headings.fontSize &&
             props.theme.typography.headings.fontSize.h1) ||
         typographyTheme.typography.headings.fontSize.h1};
+
     font-weight: ${props =>
         (props.theme.typography &&
             props.theme.typography.headings &&
@@ -18,7 +19,8 @@ const Heading1 = styled.h1`
             props.theme.typography.headings.fontWeight &&
             props.theme.typography.headings.fontWeight.h1) ||
         typographyTheme.typography.headings.fontWeight.h1};
-    margin: 1.25rem 0 0.625rem;
+
+    margin: 0.5rem 0 0.25rem; 
 `;
 
 export default Heading1;

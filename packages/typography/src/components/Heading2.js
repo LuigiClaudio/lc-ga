@@ -19,7 +19,7 @@ const Heading2 = styled.h2`
             props.theme.typography.headings.fontWeight &&
             props.theme.typography.headings.fontWeight.h2) ||
         typographyTheme.typography.headings.fontWeight.h2};
-    margin: 1.25rem 0 0.625rem;
+    margin: 0.5rem 0;
 `;
 
 export default Heading2;
