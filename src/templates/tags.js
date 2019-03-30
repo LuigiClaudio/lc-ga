@@ -14,9 +14,9 @@ const TagRoute = props => {
             </Link>
         </li>
     ));
-    const {tag} = props.pageContext;
-    const {title} = props.data.site.siteMetadata;
-    const {totalCount} = props.data.allMarkdownRemark;
+    const { tag } = props.pageContext;
+    const { title } = props.data.site.siteMetadata;
+    const { totalCount } = props.data.allMarkdownRemark;
     const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with “${tag}”`;
 
     return (
