@@ -6,6 +6,7 @@ import Layout from '../components/layout/Layout';
 
 const Container = styled.div`
     align-items: flex-start;
+    background-color: #eee;
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;

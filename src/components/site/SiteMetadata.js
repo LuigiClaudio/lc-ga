@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 // import favIcon from '../images/favIcon.ico';
 
-const SiteMetadata = ({ pathname }) => {
+const SiteMetadata = () => {
     return (
         <StaticQuery
             query={graphql`
@@ -30,7 +30,7 @@ const SiteMetadata = ({ pathname }) => {
                     // }
                 >
                     <html lang="en" amp />
-                    <link rel="canonical" href={`${siteUrl}${location.pathname}`} />
+                    <link rel="canonical" href={`${siteUrl}`} />
                     <meta name="docsearch:version" content="2.0" />
                     <meta
                         name="viewport"
