@@ -44,9 +44,7 @@ const typographyTheme = {
             },
         },
         color: {
-            default: '#222222',
-            primary: '#4285F4',
-            secondary: '#4285F4',
+            dark: '#222222',
             light: '#FFFFFF',
         },
     },

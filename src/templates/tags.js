@@ -3,20 +3,22 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
+import { H2 } from '../../packages/typography';
 
 const TagRoute = props => {
-    const posts = props.data.allMarkdownRemark.edges;
+    const { data, pageContext } = props;
+    const { allMarkdownRemark } = data;
+    const { edges, totalCount } = allMarkdownRemark;
+    const { tag } = pageContext;
 
-    const postLinks = posts.map(post => (
+    const postLinks = edges.map(post => (
         <li key={post.node.fields.slug}>
-            <Link to={post.node.fields.slug}>
-                <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-            </Link>
+            <H2>
+                <Link to={post.node.fields.slug}>{post.node.frontmatter.title}</Link>
+            </H2>
         </li>
     ));
-    const { tag } = props.pageContext;
-    const { title } = props.data.site.siteMetadata;
-    const { totalCount } = props.data.allMarkdownRemark;
+
     const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with “${tag}”`;
 
     return (
@@ -39,7 +41,12 @@ const TagRoute = props => {
     );
 };
 
-TagRoute.propTypes = {};
+TagRoute.propTypes = {
+    // eslint-disable-next-line react/forbid-prop-types
+    data: PropTypes.object.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
+    pageContext: PropTypes.object.isRequired,
+};
 
 TagRoute.defaultProps = {};
 

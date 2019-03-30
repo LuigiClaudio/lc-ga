@@ -1,3 +1,3 @@
-const typographyColorData = ['default', 'primary', 'secondary', 'light'];
+const typographyColorData = ['dark', 'light'];
 
 export default typographyColorData;

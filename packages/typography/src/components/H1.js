@@ -20,7 +20,7 @@ H1.propTypes = {
 };
 
 H1.defaultProps = {
-    color: 'default',
+    color: 'dark',
     className: null,
     children: null,
 };

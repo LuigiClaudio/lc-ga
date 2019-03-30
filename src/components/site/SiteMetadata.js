@@ -30,7 +30,7 @@ const SiteMetadata = () => {
                     // }
                 >
                     <html lang="en" amp />
-                    <link rel="canonical" href={`${siteUrl}`} />
+                    <link rel="canonical" href={`${siteUrl}${window.location.pathname}`} />
                     <meta name="docsearch:version" content="2.0" />
                     <meta
                         name="viewport"

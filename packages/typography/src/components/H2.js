@@ -20,7 +20,7 @@ H2.propTypes = {
 };
 
 H2.defaultProps = {
-    color: 'default',
+    color: 'dark',
     className: null,
     children: null,
 };
