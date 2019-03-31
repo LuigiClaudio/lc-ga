@@ -31,8 +31,7 @@ collections:
                       widget: hidden,
                       default: settingsTemplate,
                   }
-                - { name: title, label: Site settings, widget: string }
-                - { name: siteUrl, label: Site URL, widget: string }
                 - { name: siteTitle, label: Site title, widget: string }
+                - { name: siteUrl, label: Site URL, widget: string }
                 - { name: siteDescription, label: Site description, widget: string }
                 - { name: twitterHandle, label: Twitter handle, widget: string }
