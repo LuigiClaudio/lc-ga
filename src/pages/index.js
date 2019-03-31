@@ -28,7 +28,7 @@ export default () => {
                 <SubTitle>{siteDescription}</SubTitle>
                 {twitterHandle && (
                     <a
-                        href={`"https://twitter.com/${twitterHandle}"`}
+                        href={`https://twitter.com/${twitterHandle}`}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
