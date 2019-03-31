@@ -1,6 +1,9 @@
+import React from 'react';
 import { graphql } from 'gatsby';
 
-const SettingsPageTemplate = () => {};
+const SettingsPageTemplate = ({ title }) => {
+    return <span>{title}</span>;
+};
 
 export default SettingsPageTemplate;
 

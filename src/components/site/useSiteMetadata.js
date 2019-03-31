@@ -4,11 +4,9 @@ const useSiteMetadata = () => {
     const { site } = useStaticQuery(
         graphql`
             query SITE_METADATA_QUERY {
-                site {
-                    siteMetadata {
+                markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
+                    frontmatter {
                         title
-                        description
-                        twitter
                     }
                 }
             }
@@ -18,9 +16,3 @@ const useSiteMetadata = () => {
 };
 
 export default useSiteMetadata;
-
-// markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
-//     frontmatter {
-//         title
-//     }
-// }
