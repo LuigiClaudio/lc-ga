@@ -26,13 +26,15 @@ export default () => {
             <Container>
                 <Title>{siteTitle}</Title>
                 <SubTitle>{siteDescription}</SubTitle>
-                <a
-                    href="https://twitter.com/LuigiClaudio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {twitterHandle}
-                </a>
+                {twitterHandle && (
+                    <a
+                        href={`"https://twitter.com/${twitterHandle}"`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        @{twitterHandle}
+                    </a>
+                )}
             </Container>
         </Layout>
     );

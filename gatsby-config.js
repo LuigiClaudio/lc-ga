@@ -1,10 +1,4 @@
 module.exports = {
-    siteMetadata: {
-        title: 'Luigi Claudio',
-        description: 'Senior Front-end / WEB UI Developer and UX Designer',
-        siteUrl: `https://luigiclaudio.com`,
-        twitter: `@luigiclaudio`,
-    },
     plugins: [
         `gatsby-plugin-netlify-cms`,
         {
