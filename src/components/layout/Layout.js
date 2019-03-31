@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, Link, graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, withTheme } from 'styled-components';
 import theme from '../../styles/theme';
 import GlobalStyle from '../../styles/GlobalStyle';
 import SiteMetadata from '../site/SiteMetadata';
@@ -17,13 +17,16 @@ const ListLink = props => {
     );
 };
 
-const Layout = ({ placeholder, children }) => (
+const Layout = ({ placeholder, bgColor, children }) => (
     <StaticQuery
         query={graphql`
             query {
-                site {
-                    siteMetadata {
-                        title
+                markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
+                    frontmatter {
+                        siteTitle
+                        siteUrl
+                        siteDescription
+                        twitterHandle
                     }
                 }
             }
@@ -33,12 +36,12 @@ const Layout = ({ placeholder, children }) => (
                 <>
                     <SiteMetadata />
                     <GlobalStyle />
-                    <Container>
+                    <Container bgColor={bgColor}>
                         {!placeholder && (
                             <header>
                                 <Link to="/">
                                     <h3 style={{ display: `inline` }}>
-                                        {data.site.siteMetadata.title}
+                                        {data.markdownRemark.frontmatter.siteTitle}
                                     </h3>
                                 </Link>
                                 <ul style={{ listStyle: `none`, float: `right` }}>
@@ -60,11 +63,14 @@ Layout.propTypes = {
     children: PropTypes.node,
     /** Show / Hide navigation */
     placeholder: PropTypes.bool,
+    /** Background color */
+    bgColor: PropTypes.string,
 };
 
 Layout.defaultProps = {
     children: null,
     placeholder: false,
+    bgColor: null,
 };
 
-export default Layout;
+export default withTheme(Layout);

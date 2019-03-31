@@ -7,24 +7,25 @@ const SiteMetadata = () => {
     return (
         <StaticQuery
             query={graphql`
-                query SiteMetadata {
-                    site {
-                        siteMetadata {
+                query {
+                    markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
+                        frontmatter {
+                            siteTitle
                             siteUrl
-                            title
-                            twitter
+                            siteDescription
+                            twitterHandle
                         }
                     }
                 }
             `}
             render={({
-                site: {
-                    siteMetadata: { siteUrl, title, twitter },
+                markdownRemark: {
+                    frontmatter: { siteTitle, siteUrl, twitterHandle },
                 },
             }) => (
                 <Helmet
-                    defaultTitle={title}
-                    titleTemplate={`%s | ${title}`}
+                    defaultTitle={siteTitle}
+                    titleTemplate={`%s | ${siteTitle}`}
                     // onChangeClientState={(newState, addedTags, removedTags) =>
                     //     // console.log(newState, addedTags, removedTags)
                     // }
@@ -43,13 +44,13 @@ const SiteMetadata = () => {
                     <meta property="og:url" content={siteUrl} />
                     <meta property="og:type" content="website" />
                     <meta property="og:locale" content="en" />
-                    <meta property="og:site_name" content={title} />
+                    <meta property="og:site_name" content={siteTitle} />
                     {/* <meta property="og:image" content={`${siteUrl}${favIcon}`} /> */}
                     <meta property="og:image:width" content="512" />
                     <meta property="og:image:height" content="512" />
 
                     <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:site" content={twitter} />
+                    <meta name="twitter:site" content={`@${twitterHandle}`} />
                 </Helmet>
             )}
         />
