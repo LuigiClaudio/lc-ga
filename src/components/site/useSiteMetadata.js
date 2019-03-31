@@ -1,26 +1,21 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useSiteMetadata = () => {
-    const { site } = useStaticQuery(
+    const { markdownRemark } = useStaticQuery(
         graphql`
-            query SITE_METADATA_QUERY {
-                site {
-                    siteMetadata {
-                        title
-                        description
-                        twitter
+            query SiteSettings {
+                markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
+                    frontmatter {
+                        siteTitle
+                        siteUrl
+                        siteDescription
+                        twitterHandle
                     }
                 }
             }
         `,
     );
-    return site.siteMetadata;
+    return markdownRemark.frontmatter;
 };
 
 export default useSiteMetadata;
-
-// markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
-//     frontmatter {
-//         title
-//     }
-// }

@@ -19,19 +19,19 @@ const Title = styled(H1)``;
 const SubTitle = styled(H2)``;
 
 export default () => {
-    const { title, description, twitter } = useSiteMetadata();
+    const { siteTitle, siteDescription, twitterHandle } = useSiteMetadata();
 
     return (
         <Layout placeholder>
             <Container>
-                <Title>{title}</Title>
-                <SubTitle>{description}</SubTitle>
+                <Title>{siteTitle}</Title>
+                <SubTitle>{siteDescription}</SubTitle>
                 <a
                     href="https://twitter.com/LuigiClaudio"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    {twitter}
+                    {twitterHandle}
                 </a>
             </Container>
         </Layout>
