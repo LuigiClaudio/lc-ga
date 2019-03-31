@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../../components/layout/Layout';
-import { H1 } from '../../../packages/typography';
-import List from './components/List';
-import ListItem from './components/ListItem';
+import { H1, List, ListItem } from '../../../packages/typography';
 import { toKebabCase } from '../../../packages/helpers';
 
 const TagsPage = ({
