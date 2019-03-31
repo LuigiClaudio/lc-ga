@@ -18,3 +18,9 @@ const useSiteMetadata = () => {
 };
 
 export default useSiteMetadata;
+
+// markdownRemark(frontmatter: { templateKey: { eq: "settingsTemplate" } }) {
+//     frontmatter {
+//         title
+//     }
+// }
