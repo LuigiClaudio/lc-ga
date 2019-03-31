@@ -1,8 +1,8 @@
 ---
 templateKey: settingsTemplate
-path: /settings
 siteTitle: Luigi Claudio
 siteUrl: 'htttps://luigiclaudio.com'
-siteDescription: Site description
+siteDescription: Senior Front-end / WEB UI Developer and UX Designer
 twitterHandle: '@luigiclaudio'
 ---
+
