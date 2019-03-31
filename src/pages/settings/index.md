@@ -1,7 +1,7 @@
 ---
 templateKey: settingsTemplate
 siteTitle: Luigi Claudio
-siteUrl: Site URL
+siteUrl: 'htttps://luigiclaudio.com'
 siteDescription: Site description
 twitterHandle: '@luigiclaudio'
 ---
