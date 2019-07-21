@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "private": true,
+  "scripts": {
+    "build": "yarn && cd site && yarn gatsby build"
+  },
   "workspaces": {
     "packages": [
       "packages/*",
