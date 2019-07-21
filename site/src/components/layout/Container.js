@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { typographyTheme } from '../../../packages/typography';
+import { typographyTheme } from '@lc-ga/typography';
 
 const Container = styled.div`
     align-items: flex-start;

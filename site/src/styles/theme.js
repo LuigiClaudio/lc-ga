@@ -1,4 +1,4 @@
-import { typographyTheme } from '../../packages/typography';
+import { typographyTheme } from '@lc-ga/typography';
 
 const theme = {
     ...typographyTheme,

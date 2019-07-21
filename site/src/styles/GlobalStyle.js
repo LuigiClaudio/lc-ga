@@ -1,6 +1,6 @@
 import reboot from 'styled-reboot';
 import { createGlobalStyle } from 'styled-components';
-import { typographyTheme } from '../../packages/typography';
+import { typographyTheme } from '@lc-ga/typography';
 
 const globalOptions = {
     fontFamilyBase: props =>
