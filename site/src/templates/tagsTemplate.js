@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import { H2 } from '@lc-ga/typography';
 import Layout from '../components/layout/Layout';
-import { H2 } from '../../packages/typography';
 
 const TagRoute = props => {
     const { data, pageContext } = props;

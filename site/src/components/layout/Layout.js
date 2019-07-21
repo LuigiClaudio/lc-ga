@@ -17,7 +17,7 @@ const ListLink = props => {
     );
 };
 
-const Layout = ({ placeholder, bgColor, children }) => (
+const Layout = ({ placeholder, bgColor, theme, children }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -65,12 +65,15 @@ Layout.propTypes = {
     placeholder: PropTypes.bool,
     /** Background color */
     bgColor: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
+    theme: PropTypes.object,
 };
 
 Layout.defaultProps = {
     children: null,
     placeholder: false,
     bgColor: null,
+    theme: {},
 };
 
 export default withTheme(Layout);

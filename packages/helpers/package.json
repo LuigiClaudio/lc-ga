@@ -1,0 +1,13 @@
+{
+  "name": "@lc-ga/helpers",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "./index.js",
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "styled-components": "4.2.0"
+  }
+}

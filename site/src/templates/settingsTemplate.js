@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { H1, H2 } from '@lc-ga/typography';
 import useSiteMetadata from '../components/site/useSiteMetadata';
-import { H1, H2 } from '../../packages/typography';
 import Layout from '../components/layout/Layout';
 
 const Title = styled(H1)``;

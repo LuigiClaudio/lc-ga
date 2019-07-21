@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
+import { H1, List, ListItem } from '@lc-ga/typography';
+import { toKebabCase } from '@lc-ga/helpers';
 import Layout from '../../components/layout/Layout';
-import { H1, List, ListItem } from '../../../packages/typography';
-import { toKebabCase } from '../../../packages/helpers';
 
 const TagsPage = ({
     data: {
